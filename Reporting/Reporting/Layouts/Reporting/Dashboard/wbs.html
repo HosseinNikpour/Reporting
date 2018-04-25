@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <script src="../../Assets/jquery-3.2.1.min.js"></script>
+    <link href="../../Assets/select2.css" rel="stylesheet" />
+    <script src="../../Assets/select2.js"></script>
+    <script src="../../Assets/select2.fa.js"></script>
+
+
+    <title> پنل گزارش </title>
+    <script src="../Assets/highcharts/highcharts.js"></script>
+    <script src="../Assets/highcharts/highcharts-more.js"></script>
+    <script src="../Assets/highcharts/modules/data.js"></script>
+    <script src="../Assets/highcharts/modules/drilldown.js"></script>
+    <script src="../Assets/highcharts/modules/solid-gauge.js"></script>
+
+    <script src="../../Assets/iziModal.js"></script>
+    <script src="../../Assets/moment.js"></script>
+    <script src="../../Assets/moment-jalaali.js"></script>
+    <script src="Assets/dataConvertor.js"></script>
+    <script src="Assets/chartOptions.js"></script>
+    <script src="Assets/service.js"></script>
+    <script src="Assets/functions.js"></script>
+    <script src="wbs.js"></script>
+
+    <link href="faal.bootstrap.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+
+    <style>
+        li>span {
+            margin: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pag-loade">
+        <div class="loader"></div>
+    </div>
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="header-text">طرح احیای 550 هزار هکتار اراضی دشت های خوزستان و ایلام</div>
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="index.html">
+                    <img width="39" src="logo-head.png"> </a>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="top-panel">
+                        <fieldset>
+                            <div id="top-feilds" class="row">
+                                <div class='title-contract'>
+                                    <span class="value-top-feilds"> فیلتر اطلاعات</span>
+                                </div>
+                                <div>
+                                    <!-- <ul style='list-style: none'>
+                                        <li>
+                                            <input type="radio" value='all' calss='radio' name="radAnswer" checked/>
+                                        <span>کل طرح </span>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value='area'  calss='radio' name="radAnswer"/>
+                                            <span>حوزه </span>
+                                            <select id='areaSelect' multiple ></select>
+                                        </li>
+                                        <li>
+                                            <input type="radio" value='contract'  calss='radio' name="radAnswer"/>
+                                            <span>پیمان</span> 
+                                            <select id='contractSelect' multiple></select></li>
+                                    </ul> -->
+
+
+                                </div>
+
+                                <div>
+                                    <span>حوزه</span>
+                                    <select id='areaSelect' multiple></select>
+                                </div>
+                                <div>
+                                    <span> پیمان </span>
+                                    <select id='contractSelect' multiple></select>
+                                </div>
+                                <div>
+                                   
+                                        <input type="radio" value='1' name="x" style='margin-right: 5px' checked="checked"/> جمع تا دوره
+                                       
+                                        <input type="radio" value='2' name="x" style='margin-right: 5px'/> فقط این دوره/ ها
+                                    
+                                    <select id='periodSelect'></select>
+                                </div>
+                                <div>
+                                    <input type="button" value='مشاهده' id='btnView' />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- ساختار شکست -->
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                        <Table class="table table-striped table-bordered" id='wbsTableShort'>
+                                <thead style='text-align:center'>
+                                    <tr>
+                                        <th>عملیات</th>
+                                                                          <th>مقدار کل کار</th>
+                                        <th>انجام شده</th>
+                                        <th>باقی مانده</th>
+                                    </tr>
+                                </thead>
+                                <tbody style='text-align:right'>
+        
+                                </tbody>
+                            </Table>
+                    <Table class="table table-striped table-bordered" id='wbsTable'>
+                        <thead style='text-align:center'>
+                            <tr>
+                                <th>عملیات اصلی</th>
+                                <th>عملیات اجرایی</th>
+                                <th>آیتم</th>
+                                <th>واحد</th>
+                                <th>مقدار کل کار</th>
+                                <th>انجام شده</th>
+                                <th>باقی مانده</th>
+                            </tr>
+                        </thead>
+                        <tbody style='text-align:right'>
+
+                        </tbody>
+                    </Table>
+                   
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

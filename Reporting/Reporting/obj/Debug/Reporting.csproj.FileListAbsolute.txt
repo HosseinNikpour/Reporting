@@ -1,0 +1,6 @@
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\bin\Debug\Reporting.dll
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\bin\Debug\Reporting.pdb
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\obj\Debug\Reporting.dll
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\obj\Debug\Reporting.pdb
+C:\Users\spadmin\documents\visual studio 2013\Projects\Reporting\Reporting\obj\Debug\Reporting.csprojResolveAssemblyReference.cache

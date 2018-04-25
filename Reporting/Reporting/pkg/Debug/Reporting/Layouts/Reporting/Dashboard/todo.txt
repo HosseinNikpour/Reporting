@@ -1,0 +1,1 @@
+﻿1.remove plan from exec operation and create new sp for it

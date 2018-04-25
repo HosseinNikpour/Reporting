@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="b63d546f-5df8-4b2e-b192-533c10543078" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="Reporting.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="Reporting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68aac75d6f14d617" Namespace="Reporting.TableWP" TypeName="*" />
+        <SafeControl Assembly="Reporting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=68aac75d6f14d617" Namespace="Reporting.ChartWP" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\Reporting\TableWP\TableWPUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\Reporting\ChartWP\ChartWPUserControl.ascx" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\BYekanNumber.eot" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\BYekanNumber.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\BYekanNumber.woff" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir-Bold.eot" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir-Bold.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir-Bold.woff" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir-Bold.woff2" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir.eot" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir.woff" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Vazir.woff2" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Yekan.eot" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Yekan.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Assets\fonts\Yekan.woff" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ui-grid.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ui-grid.woff" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\BYekanNumber.eot" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\BYekanNumber.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\BYekanNumber.woff" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\Yekan.eot" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\Yekan.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\fonts\Yekan.woff" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.eot" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.woff" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\Yekan.eot" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\Yekan.ttf" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\fonts\Yekan.woff" />
+    <TemplateFile Location="Layouts\Reporting\static\css\app.css.map" />
+    <TemplateFile Location="Layouts\Reporting\static\fonts\Yekan.05727d3.woff" />
+    <TemplateFile Location="Layouts\Reporting\static\fonts\Yekan.1008c3b.ttf" />
+    <TemplateFile Location="Layouts\Reporting\static\fonts\Yekan.1ce443b.eot" />
+    <TemplateFile Location="Layouts\Reporting\static\js\app.js.map" />
+    <TemplateFile Location="Layouts\Reporting\static\js\manifest.js.map" />
+    <TemplateFile Location="Layouts\Reporting\static\js\vendor.js.map" />
+    <TemplateFile Location="Layouts\Reporting\Assets\bootstrap.min.css" />
+    <TemplateFile Location="Layouts\Reporting\Assets\custom-grid.css" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\csv.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\excel-builder.dist.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\jszip.min.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\lodash.min.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\pdfmake.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\grunt-scripts\vfs_fonts.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\highcharts-more.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\highcharts.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\data.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\drilldown.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\exporting.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\funnel.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\gantt.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\highcharts\modules\solid-gauge.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ng-table.min.css" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ng-table.min.js" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ui-grid.css" />
+    <TemplateFile Location="Layouts\Reporting\Assets\ui-grid.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\area.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\area.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\Assets\chartOptions.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\Assets\dataConvertor.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\Assets\functions.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\Assets\service.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\contract.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\contract.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\contract2.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\contract2.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\dashboard.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\faal.bootstrap.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\img\15xvbd5.png" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\logo-head.png" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\bootstrap.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\bootstrap.min.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\dashboard.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\dashbord.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\index.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\logo-head.png" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\new\sb-admin.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\report.css" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\tahvil.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\tahvil.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\todo.txt" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\wbs.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\wbs.js" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\wbs2.html" />
+    <TemplateFile Location="Layouts\Reporting\Dashboard\wbs2.js" />
+    <TemplateFile Location="Layouts\Reporting\service.aspx" />
+    <TemplateFile Location="Layouts\Reporting\service.js" />
+    <TemplateFile Location="Layouts\Reporting\static\css\app.css" />
+    <TemplateFile Location="Layouts\Reporting\static\js\app.js" />
+    <TemplateFile Location="Layouts\Reporting\static\js\manifest.js" />
+    <TemplateFile Location="Layouts\Reporting\static\js\vendor.js" />
+    <TemplateFile Location="Layouts\Reporting\Tahvil\Tahvil.aspx" />
+    <TemplateFile Location="Layouts\Reporting\Tahvil\Tahvil.js" />
+    <TemplateFile Location="Layouts\Reporting\Tahvil\Tahvil2.js" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="Reporting_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

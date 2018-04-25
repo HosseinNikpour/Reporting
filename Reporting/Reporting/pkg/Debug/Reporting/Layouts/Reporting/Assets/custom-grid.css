@@ -1,0 +1,223 @@
+.reporting {
+    padding-bottom: 20px;
+    direction: rtl;
+    padding-right: 35px;
+}
+.ui-grid-menu {
+    position: initial;
+    /* margin-right: 93px; */
+}
+
+    .ui-grid-menu .ui-grid-menu-inner ul li button {     
+        text-align: right;
+    }
+
+
+input[type=button], input[type=reset], input[type=submit], button {
+  
+    margin-left: 0;
+}
+ .ui-grid-render-container-body .ui-grid-viewport {
+    width: 1094px;
+}
+ .ui-grid-render-container-body .ui-grid-canvas {
+    width: 1077px;
+}
+ .ui-grid-coluiGrid-0008 {
+    min-width: 370px;
+}
+
+
+input[type=button], input[type=reset], input[type=submit], button {
+
+    margin-right: 0px;
+}
+
+.ui-grid[dir=rtl] .ui-grid-menu-button{    height: 24px;}
+.ui-grid-cell-contents{padding-top: 4px;padding-right: 10px;/* white-space: normal; */}
+
+.myHeader
+{
+   white-space: normal!important;
+}
+
+.grid {
+ 
+  height: 700px;
+}
+
+.ui-grid-viewport {
+
+    /*overflow-x: hidden !important;*/
+}
+
+
+.ui-grid-render-container-right .ui-grid-viewport {
+ 
+    height: 471px;
+}
+.ui-grid-viewport {
+    /* min-width: 469px; */
+}
+
+
+
+.head-box {
+    padding: 20px;
+    box-shadow: 0 0 0px rgba(0,0,0,0.2), 0 0 13px rgba(213,213,213,1);
+    margin: 3px;
+    margin-top: 3px;
+    margin-bottom: 35px;
+}
+
+
+ .ui-grid-row, .ui-grid-cell,  .ui-grid-cell .ui-grid-vertical-bar {
+    height: 43px!important;
+}
+
+
+.ui-grid-header-cell-label {
+    color: #6d6d6d;
+}
+
+.ui-grid-column-menu-button{
+        padding-top: 8px;
+        padding-right: 10px;
+        color: #565656;
+}
+
+#main-warp{
+        box-shadow: 0 0 0px rgba(0,0,0,0.2), 0 0 9px rgba(213,213,213,1);
+    padding: 23px;
+    background: #fbfbfb;
+}
+
+
+.button {
+    border-radius: 4px;
+    background-color: #2196f3!important;
+    border: none!important;
+    color: white!important;
+}
+
+
+.ui-grid-top-panel {
+    /* height: 64px; */
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e1e5ff), color-stop(1, #e1e5ff));
+}
+
+.ui-grid-menu-button{
+
+z-index: 2;
+
+position: absolute;
+
+left: 0;
+
+right: auto;
+
+background: #e1e5ff!important;
+
+border: 1px solid #c4ccff!important;
+
+cursor: pointer;
+
+min-height: 35px!important;
+
+font-weight: normal;
+
+width: 21px;
+
+text-align: center;
+}
+
+.ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
+
+    background-color: #eaedff!important;
+    border-bottom: solid 1px #979eca85;
+}
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #f6f7ff;
+}
+.ui-grid-header-cell{   }
+
+.ui-grid-cell-contents.ui-grid-header-cell-primary-focus{
+        text-align: center;
+        padding-top: 9px;
+        /* padding-right: 13px; */
+        }
+
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #b7b7b7; 
+    border-radius: 1px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c7cce0; 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8c9bff; 
+}
+.ui-grid-column-menu-button .ui-grid-icon-angle-down {
+    vertical-align: sub;
+    margin-left: 2px;
+}
+#top-button{    width: 68px;
+    margin: 0 auto;
+    margin-bottom: 19px;
+}
+.ui-grid[dir=rtl] .ui-grid-column-menu-button {
+    width: 28px;
+    position: absolute;
+    right: -13px;
+    top: 0;
+    /* right: inherit; */
+}
+
+.ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid{
+        left: 9px;
+        position: absolute;
+}
+
+
+
+.Green{
+	    background-color: #8BC34A!important;
+	    color: #8bc34a!important;
+}
+.Red{
+	    background-color: #ff5c4f!important;
+	    color: #ff5c4f!important;
+	    }
+.Yellow{
+	    background-color: #feb43e!important;
+	    color: #feb43e!important;
+}
+.Gray{
+	    background-color: gray!important;
+	    color: #feb43e!important;
+}
+.Orange{
+	    background-color: orange!important;
+	    color: #feb43e!important;
+}
+#pageTitle{display:none;}
+#contentRow {
+    padding-top: 0px;
+}
+
+.ms-rtestate-field TABLE, .ms-rtestate-write TABLE {
+    position: absolute;
+    border-collapse: collapse;
+    margin-top: 14px;
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature AlwaysForceInstall="TRUE" Id="1ae917a7-d425-4edd-8189-3cb69bb144f0" Scope="Site" xmlns="http://schemas.microsoft.com/sharepoint/" Title="Reporting Feature1">
+  <ElementManifests>
+    <ElementManifest Location="TableWP\Elements.xml" />
+    <ElementFile Location="TableWP\TableWP.webpart" />
+    <ElementManifest Location="ChartWP\Elements.xml" />
+    <ElementFile Location="ChartWP\ChartWP.webpart" />
+  </ElementManifests>
+</Feature>

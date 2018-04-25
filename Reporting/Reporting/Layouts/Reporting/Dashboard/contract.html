@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../../Assets/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../../Assets/bootstrap-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="../../Assets/iziModal.css" />
+    <link rel="stylesheet" type="text/css" href="report.css" />
+
+    <script src="../Assets/highcharts/highcharts.js"></script>
+    <script src="../Assets/highcharts/highcharts-more.js"></script>
+    <script src="../Assets/highcharts/modules/data.js"></script>
+    <script src="../Assets/highcharts/modules/drilldown.js"></script>
+    <script src="../Assets/highcharts/modules/solid-gauge.js"></script>
+    <script src="../../Assets/jquery-3.2.1.min.js"></script>
+    <script src="../../Assets/iziModal.js"></script>
+    <script src="../../Assets/moment.js"></script>
+    <script src="../../Assets/moment-jalaali.js"></script>
+    <script src="Assets/dataConvertor.js"></script>
+    <script src="Assets/chartOptions.js"></script>
+    <script src="Assets/service.js"></script>
+    <script src="Assets/functions.js"></script>
+    <script src="contract.js"></script>
+</head>
+
+<body>
+
+    <div id="pag-loade">
+        <div class="loader"></div>
+    </div>
+
+    <div class='head-title'>
+        <span>لطفا پیمان مورد نظر رو انتخاب کنید :</span>
+        <select id='contractsSelect'></select>
+    </div>
+    <br>
+    <div id="warp-home">
+        <!--  شناسنامه پیمان -->
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    شناسنامه پیمان
+                </div>
+            </div>
+            <div id="top-panel">
+                <!-- <div id="caption-title-top"> اطاعات شناسنامه پیمان </div> -->
+                <fieldset>
+
+                    <div id="top-feilds" class="col-md-12">
+                        <div class="top-feilds-child col-md-6">
+                            <span class="lable-top-feilds"> عنوان پیمان </span>
+                            <span class="value-top-feilds" id="contract_title"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> تاریخ شروع </span>
+                            <span class="value-top-feilds" id="contract_sDate"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> تاریخ پایان </span>
+                            <span class="value-top-feilds" id="contract_eDate"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> مدت پیمان </span>
+                            <span class="value-top-feilds" id="contract_period"> </span>
+
+                        </div>
+
+                    </div>
+                    <div id="top-feilds" class="col-md-12">
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> حوزه اجرایی </span>
+                            <span class="value-top-feilds" id="contract_Area"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> پیمانکار </span>
+                            <span class="value-top-feilds" id="contract_contractor"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-2">
+                            <span class="lable-top-feilds"> مشاور </span>
+                            <span class="value-top-feilds" id="contract_advisor"> </span>
+                        </div>
+                        <div class="top-feilds-child col-md-3">
+                            <span class="lable-top-feilds"> مدیرطرح </span>
+                            <span class="value-top-feilds" id="contract_manager"> </span>
+                        </div>
+
+
+
+
+
+                        <!-- <div class="top-feilds-child col-md-2">
+                        <span class="lable-top-feilds"> اسم </span>
+                        <span class="value-top-feilds" id="contract_title1"> </span>
+                    </div> -->
+                    </div>
+                </fieldset>
+
+            </div>
+        </div>
+        <!--ساختار شکست -->
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    ساختار شکست
+                </div>
+            </div>
+            <div id="top-section-table col-md-12">
+
+                <!--سطح ها -->
+
+                <div class="box-content col-md-2">
+                    <div class="content-item-page">
+                        <div class="head-labale-item"> سطح قراردادی </div>
+                        <div id="item-box">
+                            <span>شبکه فرعی:</span>
+                            <span id='wbs_totalnet'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>زهکش زیرزمینی :</span>
+                            <span id='wbs_totaldar'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>تجهیز و نوسازی :</span>
+                            <span id='wbs_totalequ'></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-content col-md-2">
+                    <div class="content-item-page">
+                        <div class="head-labale-item"> سطح اولیه ساختار شکست </div>
+                        <div id="item-box">
+                            <span>شبکه فرعی:</span>
+                            <span id='wbs_firstnet'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>زهکش زیرزمینی :</span>
+                            <span id='wbs_firstdar'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>تجهیز و نوسازی :</span>
+                            <span id='wbs_firstequ'></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-content col-md-2">
+                    <div class="content-item-page">
+                        <div class="head-labale-item"> سطح نهایی ساختار شکست </div>
+                        <div id="item-box">
+                            <span>شبکه فرعی:</span>
+                            <span id='wbs_finalnet'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>زهکش زیرزمینی :</span>
+                            <span id='wbs_finaldar'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>تجهیز و نوسازی :</span>
+                            <span id='wbs_finalequ'></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-content col-md-3">
+                    <div class="content-item-page">
+                        <div class="head-labale-item">مبلغ اولیه </div>
+                        <div id="item-box">
+                            <span>شبکه فرعی:</span>
+                            <span id='price_firstnet'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>زهکش زیرزمینی :</span>
+                            <span id='price_firstdar'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>تجهیز و نوسازی :</span>
+                            <span id='price_firstequ'></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box-content col-md-3">
+                    <div class="content-item-page">
+                        <div class="head-labale-item"> مبلغ نهایی </div>
+                        <div id="item-box">
+                            <span>شبکه فرعی:</span>
+                            <span id='price_finalnet'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>زهکش زیرزمینی :</span>
+                            <span id='price_finaldar'></span>
+                        </div>
+                        <div id="item-box">
+                            <span>تجهیز و نوسازی :</span>
+                            <span id='price_finalequ'></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    تحویل پیمان
+                </div>
+            </div>
+
+            <div id="row" class="col-md-12">
+                <div class="column col-md-4">
+                    <div id="tahvil1Chart"></div>
+                </div>
+                <div class="column col-md-3">
+                    <select id='tahvilSelectType'>
+                        <option value='net'>شبکه فرعی</option>
+                        <option value='dar'>زهکش زیرزمینی</option>
+                        <option value='equ'>تجهیز و نوسازی</option>
+                    </select>
+                    <div class="box-content box-inchart">
+                        <div class="content-item-page">
+                            <div class="head-labale-item">سطح </div>
+
+                            <div id="item-box">
+                                <span> سطح کل:</span>
+                                <span id='t_totalSpace'></span>
+                            </div>
+                            <div id="item-box">
+                                <span>سطح اجراشده :</span>
+                                <span id='t_execSpace'></span>
+                            </div>
+                            <div id="item-box">
+                                <span> سطح ارسال مستندات :</span>
+                                <span id='t_docSpace'></span>
+                            </div>
+                            <div id="item-box">
+                                <span> تحویل موقت :</span>
+                                <span id='t_deliverSpace'></span>
+                            </div>
+                            <div id="item-box">
+                                <span> رفع نقص شده :</span>
+                                <span id='t_deliverRemovedSpace'></span>
+                            </div>
+                            <div id="item-box">
+                                <span> تحویل قطعی :</span>
+                                <span id='t_deliver2Space'></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!--ارزشیابی -->
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    ارزشیابی
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="show-reports">
+                    <span> آخرین دوره ارزشیابی </span>
+                    <span id='lastPeriodEval'> </span>
+                </div>
+                <div class="show-reports">
+                    <span> امتیاز پیمانکار </span>
+                    <span id='contracorEvalScore'> </span>
+                    <!-- <a href="#" data-izimodal-open="#evalModal" data-izimodal-transitionin="fadeInDown">سوابق</a> -->
+                </div>
+
+                <div class="show-reports">
+                    <span> امتیاز مشاور </span>
+                    <span id='advisorEvalScore'> </span>
+                </div>
+            </div>
+            <div class="column col-md-5">
+                <div id="evalChart"></div>
+            </div>
+        </div>
+        <!--اجرا -->
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    اجرا
+                </div>
+            </div>
+
+            <div id="row" class="col-md-12">
+                <div class="column col-md-6">
+                    <div id="ejra1Chart"></div>
+                </div>
+                <div class="column col-md-6">
+                    <div id="ejra2Chart"></div>
+                    <input type="checkbox" onclick="ejraOperationChart()" /> نمایش به صورت درصدی
+                </div>
+            </div>
+        </div>
+        <!-- صورت وضعیت -->
+        <div class='full'>
+            <div class='section-label'>
+                <div class='legend'>
+                    صورت وضعیت
+                </div>
+            </div>
+
+            <div id="row" class="col-md-12">
+
+                <div class="box-content col-md-3">
+                    <div class="content-item-page">
+                        <div class="head-labale-item">صورت وضعیت پیمانکار</div>
+                        <div id="item-box">
+                            <span> شماره صورت وضعیت :</span>
+                            <span id='inv_title'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> تاریخ شروع :</span>
+                            <span id='inv_sDate'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> تاریخ پایان :</span>
+                            <span id='inv_eDate'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ شبکه :</span>
+                            <span id='inv_networkCM'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ تجهیز و نوسازی :</span>
+                            <span id='inv_equippedCM'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ کل :</span>
+                            <span id='inv_totalPrice'></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content col-md-3">
+                    <div class="content-item-page">
+                        <div class="head-labale-item"> صورت وضعیت مشاور</div>
+                        <div id="item-box">
+                            <span> شماره صورت وضعیت :</span>
+                            <span id='invC_title'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> تاریخ شروع :</span>
+                            <span id='invC_sDate'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> تاریخ پایان :</span>
+                            <span id='invC_eDate'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ :</span>
+                            <span id='invC_networkCM'></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-content col-md-3">
+                    <div class="content-item-page">
+                        <div class="head-labale-item">تعدیل </div>
+                        <div id="item-box">
+                            <span> شماره تعدیل :</span>
+                            <span id='adj_title'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> تاریخ تایید مدیرطرح :</span>
+                            <span id='adj_sDate'></span>
+                        </div>
+                        <!-- <div id="item-box">
+                        تاریخ پایان :
+                        <span id='adj_eDate'></span>
+                    </div> -->
+                        <div id="item-box">
+                            <span> مبلغ شبکه :</span>
+                            <span id='adj_networkCM'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ تجهیز و نوسازی :</span>
+                            <span id='adj_equippedCM'></span>
+                        </div>
+                        <div id="item-box">
+                            <span> مبلغ کل :</span>
+                            <span id='adj_totalPrice'></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row2"  class="col-md-12">
+
+                <div id="invoiceChart"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- <div id="evalModal">
+        kfjsdhfjsdgfhsdgfhgsdjfjs
+    </div> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C93D313F-07D6-402F-ACAE-631C68C3FB69}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reporting</RootNamespace>
+    <AssemblyName>Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <AssemblyDeploymentTarget>GlobalAssemblyCache</AssemblyDeploymentTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartWP\ChartWP.cs" />
+    <Compile Include="ChartWP\ChartWPUserControl.ascx.cs">
+      <DependentUpon>ChartWPUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChartWP\ChartWPUserControl.ascx.designer.cs">
+      <DependentUpon>ChartWPUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\Reporting\DataAccessBase.cs" />
+    <Compile Include="Layouts\Reporting\service.aspx.cs">
+      <DependentUpon>service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\Reporting\service.aspx.designer.cs">
+      <DependentUpon>service.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableWP\TableWP.cs" />
+    <Compile Include="TableWP\TableWPUserControl.ascx.cs">
+      <DependentUpon>TableWPUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TableWP\TableWPUserControl.ascx.designer.cs">
+      <DependentUpon>TableWPUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ChartWP\ChartWP.webpart" />
+    <None Include="ChartWP\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{607b43f4-3bce-4f51-a368-e6c74b2282d8}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{c152bebb-0f37-4656-9e72-554ba4d61a54}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\Reporting\Assets\fonts\BYekanNumber.eot" />
+    <None Include="Layouts\Reporting\Assets\fonts\BYekanNumber.ttf" />
+    <None Include="Layouts\Reporting\Assets\fonts\BYekanNumber.woff" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir-Bold.eot" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir-Bold.ttf" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir-Bold.woff" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir-Bold.woff2" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir.eot" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir.ttf" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir.woff" />
+    <None Include="Layouts\Reporting\Assets\fonts\Vazir.woff2" />
+    <None Include="Layouts\Reporting\Assets\fonts\Yekan.eot" />
+    <None Include="Layouts\Reporting\Assets\fonts\Yekan.ttf" />
+    <None Include="Layouts\Reporting\Assets\fonts\Yekan.woff" />
+    <None Include="Layouts\Reporting\Assets\ui-grid.ttf" />
+    <None Include="Layouts\Reporting\Assets\ui-grid.woff" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\BYekanNumber.eot" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\BYekanNumber.ttf" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\BYekanNumber.woff" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\Yekan.eot" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\Yekan.ttf" />
+    <None Include="Layouts\Reporting\Dashboard\fonts\Yekan.woff" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.eot" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.ttf" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\BYekanNumber.woff" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\Yekan.eot" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\Yekan.ttf" />
+    <None Include="Layouts\Reporting\Dashboard\new\fonts\Yekan.woff" />
+    <None Include="Layouts\Reporting\static\css\app.css.map" />
+    <None Include="Layouts\Reporting\static\fonts\Yekan.05727d3.woff" />
+    <None Include="Layouts\Reporting\static\fonts\Yekan.1008c3b.ttf" />
+    <None Include="Layouts\Reporting\static\fonts\Yekan.1ce443b.eot" />
+    <None Include="Layouts\Reporting\static\js\app.js.map" />
+    <None Include="Layouts\Reporting\static\js\manifest.js.map" />
+    <None Include="Layouts\Reporting\static\js\vendor.js.map" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{868492c8-09a6-4c23-826f-383ada1dddcd}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{b63d546f-5df8-4b2e-b192-533c10543078}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="TableWP\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8c0bda3c-ee72-4480-a8df-48bf75559188}</SharePointProjectItemId>
+    </None>
+    <None Include="TableWP\TableWP.webpart" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ChartWP\ChartWPUserControl.ascx" />
+    <Content Include="ChartWP\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Layouts\Reporting\Assets\bootstrap.min.css" />
+    <Content Include="Layouts\Reporting\Assets\custom-grid.css" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\csv.js" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\excel-builder.dist.js" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\jszip.min.js" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\lodash.min.js" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\pdfmake.js" />
+    <Content Include="Layouts\Reporting\Assets\grunt-scripts\vfs_fonts.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\highcharts-more.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\highcharts.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\data.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\drilldown.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\exporting.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\funnel.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\gantt.js" />
+    <Content Include="Layouts\Reporting\Assets\highcharts\modules\solid-gauge.js" />
+    <Content Include="Layouts\Reporting\Assets\ng-table.min.css" />
+    <Content Include="Layouts\Reporting\Assets\ng-table.min.js" />
+    <Content Include="Layouts\Reporting\Assets\ui-grid.css" />
+    <Content Include="Layouts\Reporting\Assets\ui-grid.js" />
+    <Content Include="Layouts\Reporting\Dashboard\area.html" />
+    <Content Include="Layouts\Reporting\Dashboard\area.js" />
+    <Content Include="Layouts\Reporting\Dashboard\Assets\chartOptions.js" />
+    <Content Include="Layouts\Reporting\Dashboard\Assets\dataConvertor.js" />
+    <Content Include="Layouts\Reporting\Dashboard\Assets\functions.js" />
+    <Content Include="Layouts\Reporting\Dashboard\Assets\service.js" />
+    <Content Include="Layouts\Reporting\Dashboard\contract.html" />
+    <Content Include="Layouts\Reporting\Dashboard\contract.js" />
+    <Content Include="Layouts\Reporting\Dashboard\contract2.html" />
+    <Content Include="Layouts\Reporting\Dashboard\contract2.js" />
+    <Content Include="Layouts\Reporting\Dashboard\dashboard.css" />
+    <Content Include="Layouts\Reporting\Dashboard\faal.bootstrap.css" />
+    <Content Include="Layouts\Reporting\Dashboard\img\15xvbd5.png" />
+    <Content Include="Layouts\Reporting\Dashboard\logo-head.png" />
+    <Content Include="Layouts\Reporting\Dashboard\new\bootstrap.css" />
+    <Content Include="Layouts\Reporting\Dashboard\new\bootstrap.min.css" />
+    <Content Include="Layouts\Reporting\Dashboard\new\dashboard.css" />
+    <Content Include="Layouts\Reporting\Dashboard\new\dashbord.js" />
+    <Content Include="Layouts\Reporting\Dashboard\new\index.html" />
+    <Content Include="Layouts\Reporting\Dashboard\new\logo-head.png" />
+    <Content Include="Layouts\Reporting\Dashboard\new\sb-admin.css" />
+    <Content Include="Layouts\Reporting\Dashboard\report.css" />
+    <Content Include="Layouts\Reporting\Dashboard\tahvil.html" />
+    <Content Include="Layouts\Reporting\Dashboard\tahvil.js" />
+    <Content Include="Layouts\Reporting\Dashboard\todo.txt" />
+    <Content Include="Layouts\Reporting\Dashboard\wbs.html" />
+    <Content Include="Layouts\Reporting\Dashboard\wbs.js" />
+    <Content Include="Layouts\Reporting\Dashboard\wbs2.html" />
+    <Content Include="Layouts\Reporting\Dashboard\wbs2.js" />
+    <Content Include="Layouts\Reporting\service.aspx" />
+    <Content Include="Layouts\Reporting\service.js" />
+    <Content Include="Layouts\Reporting\static\css\app.css" />
+    <Content Include="Layouts\Reporting\static\js\app.js" />
+    <Content Include="Layouts\Reporting\static\js\manifest.js" />
+    <Content Include="Layouts\Reporting\static\js\vendor.js" />
+    <Content Include="Layouts\Reporting\Tahvil\Tahvil.aspx" />
+    <Content Include="Layouts\Reporting\Tahvil\Tahvil.js" />
+    <Content Include="Layouts\Reporting\Tahvil\Tahvil2.js" />
+    <Content Include="TableWP\Elements.xml" />
+    <Content Include="TableWP\TableWPUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

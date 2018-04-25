@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="../../Assets/jquery-3.2.1.min.js"></script>
+    <script src="/_LAYOUTS/15/assets/angular.min.js"></script>
+    <script src="/_LAYOUTS/15/assets/angular-touch.js"></script>
+    <script src="/_LAYOUTS/15/assets/angular-animate.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/csv.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/pdfmake.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/vfs_fonts.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/lodash.min.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/jszip.min.js"></script>
+    <script src="/_LAYOUTS/15/reporting/Assets/grunt-scripts/excel-builder.dist.js"></script>
+
+    <script src="/_LAYOUTS/15/assets/moment.js"></script>
+    <script src="/_LAYOUTS/15/assets/moment-jalaali.js"></script>
+
+
+    <link href="/_LAYOUTS/15/reporting/Assets/ui-grid.css" rel="stylesheet" />
+    <link href="/_LAYOUTS/15/reporting/Assets/custom-grid.css" rel="stylesheet" />
+
+    <script src="/_LAYOUTS/15/reporting/Assets/ui-grid.js"></script>
+    <script src="Assets/service.js"></script>
+    <script src="wbs2.js"></script>
+    <title> پنل گزارش </title>
+
+</head>
+
+<body>
+    <div id="main-warp" ng-app="App" ng-controller="Ctrl">
+
+
+
+
+        <style>
+            #show-colors {
+                box-shadow: 0 0 0px rgba(0, 0, 0, 0.2), 0 0 9px rgba(213, 213, 213, 1);
+                margin: 0 auto;
+                width: 917px;
+                background: #f7f7f7;
+                padding: 12px;
+                min-height: 52px;
+            }
+
+            #endOP {
+                background: #8bc34a;
+                color: white;
+                border: solid 1px #71d003;
+            }
+
+            #noop {
+                background: #808080;
+                color: white;
+                border: solid 1px #a2a2a2;
+            }
+
+            #waitop {
+                background: #ffbe00;
+                color: black;
+                border: solid 1px #ffd34f;
+            }
+
+            #startop {
+                background: #ff5c4f;
+                color: white;
+                border: solid 1px #ffafaf;
+            }
+
+            #editop {
+                background: #21c1f3;
+                color: white;
+                border: solid 1px #57d7ff;
+            }
+
+            .color-item {
+                float: right;
+                padding: 8px;
+                border-radius: 10px;
+                width: 148px;
+                text-align: center;
+                margin: 5px;
+            }
+        </style>
+<div>
+        <div>
+                <span>حوزه</span>
+                <select ng-model='selectedArea' multiple ng-options="x.Id as x.Title for x in areas"></select>
+            </div>
+            <div>
+                <span> پیمان </span>
+                <select ng-model='selectedContract' multiple ng-options="x.Id as x.Title for x in contracts"></select>
+            </div>
+            <div>
+               
+                    <!-- <input ng-model type="radio" value='1' name="x" style='margin-right: 5px' checked="checked"/> جمع تا دوره
+                   
+                    <input type="radio" value='2' name="x" style='margin-right: 5px'/> فقط این دوره/ ها -->
+                <select ng-model='selectedType'><option value='1'> جمع تا دوره</option><option value='2'>فقط این دوره/ ها</option></select>
+                <select ng-model='selectedPeriod' ng-options="x.Id as x.Title for x in periods"></select>
+            </div>
+            <div>
+                <input type="button" value='مشاهده' ng-click='showData' />
+            </div>
+</div>
+        <div>
+            <div id="grid1" ui-grid="gridOptions" dir="rtl" class="grid" ui-grid-resize-columns ui-grid-grouping ui-grid-exporter>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
